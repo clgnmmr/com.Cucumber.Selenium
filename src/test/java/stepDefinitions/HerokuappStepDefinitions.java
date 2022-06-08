@@ -19,7 +19,7 @@ public class HerokuappStepDefinitions {
     @Given("Add Element butonuna basar")
     public void add_element_butonuna_basar() {
        herokuappPage.addElementButtonu.click();
-       herokuappPage.addElementButtonu.click();
+
 
     }
     @Then("Delete butonu gorunur oluncaya kadar bekleyin")
