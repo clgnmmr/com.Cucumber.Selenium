@@ -1,6 +1,8 @@
+stepDefinitions\AutomationStepDefinitions.class
 stepDefinitions\AmazonStepDefinitions.class
 stepDefinitions\DataTablesStepDefinitions.class
 pages\GuruPage.class
+pages\AutomationPage.class
 pages\HerokuappPage.class
 pages\AmazonPage.class
 runners\TestRunner.class
@@ -9,6 +11,7 @@ pages\HMCPage.class
 stepDefinitions\Hooks.class
 runners\TestRunner2.class
 pages\DataTablesPage.class
+stepDefinitions\ExcelStepDefinitions.class
 stepDefinitions\HerokuappStepDefinitions.class
 utilities\ConfigReader.class
 stepDefinitions\HMCStepDefinitions.class

@@ -30,6 +30,6 @@ Feature: US1009 Datatables sitesine 5 farkli giris yapalim
       | firstname |lastName  |position  |office  |extension  |startDate   |salary  |
       | Alim      | Alim     | QA       | ankara | UI        | 2021-10-11 | 10000  |
       | Berk      | Can      | tester   | ankara | api       | 2022-05-05 | 11000  |
-      | Hüseyin   | Korkmaz  | BA       | berlin | -         | 2022-07-10 | 40000  |
+      | Huseyin   | Korkmaz  | BA       | berlin | -         | 2022-07-10 | 40000  |
       | Fatih     | Sahin    | PO       | berlin | -         | 2022-03-12 | 45000  |
       | Ahmet     | Kaya     | Tester   | ankara | database  | 2022-06-03 | 11000  |

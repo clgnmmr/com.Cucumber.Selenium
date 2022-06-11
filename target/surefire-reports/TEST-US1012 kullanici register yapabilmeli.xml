@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="US1001 Kullanici Amazon Sayfasinda Arama Yapar" time="46.247" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="US1012 kullanici register yapabilmeli" time="12.829" tests="1" errors="1" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -62,7 +62,33 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="TC01 kullanici amazonda kelime aratir" classname="US1001 Kullanici Amazon Sayfasinda Arama Yapar" time="15.397"/>
-  <testcase name="TC02 kullanici amazonda Java aratir" classname="US1001 Kullanici Amazon Sayfasinda Arama Yapar" time="18.797"/>
-  <testcase name="TC03 kullanici iphone aratir" classname="US1001 Kullanici Amazon Sayfasinda Arama Yapar" time="12.049"/>
+  <testcase name="TC17 kullanici uygun datalarla register olabilmeli" classname="US1012 kullanici register yapabilmeli" time="12.829">
+    <error message="The step &apos;user Create and account bölümüne email adresi girer&apos; and 1 other step(s) are undefined.&#10;You can implement these steps using the snippet(s) below:&#10;&#10;@Given(&quot;user Create and account bölümüne email adresi girer&quot;)&#10;public void user_create_and_account_bölümüne_email_adresi_girer() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;hesap olustugunu dogrulayin&quot;)&#10;public void hesap_olustugunu_dogrulayin() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.junit.UndefinedStepException">io.cucumber.junit.UndefinedStepException: 
+The step 'user Create and account bölümüne email adresi girer' and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user Create and account bölümüne email adresi girer")
+public void user_create_and_account_bölümüne_email_adresi_girer() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("hesap olustugunu dogrulayin")
+public void hesap_olustugunu_dogrulayin() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+</error>
+    <system-err><![CDATA[Starting ChromeDriver 102.0.5005.61 (0e59bcc00cc4985ce39ad31c150065f159d95ad3-refs/branch-heads/5005@{#819}) on port 59593
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Haz 11, 2022 12:46:01 ÖS org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Haz 11, 2022 12:46:01 ÖS org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 102, so returning the closest version found: 99
+Haz 11, 2022 12:46:01 ÖS org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Found CDP implementation for version 102 of 99
+]]></system-err>
+  </testcase>
 </testsuite>

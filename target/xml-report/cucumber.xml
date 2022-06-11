@@ -1,32 +1,374 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="51.782">
-    <testcase classname="US1012 kullanici register yapabilmeli" name="TC17 kullanici uygun datalarla register olabilmeli" time="51.232">
-        <failure message="Unable to find element with locator By.xpath: //*[text()='Welcome to your account. Here you can manage all of your personal information and orders.']&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.1.3', revision: '7b1ebf28ef'&#10;System info: host: 'CILGINMIMAR', ip: '192.168.1.115', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15'&#10;Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchElementException">
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="29" time="528.837">
+    <testcase classname="US1001 Kullanici Amazon Sayfasinda Arama Yapar" name="TC01 kullanici amazonda kelime aratir" time="14.948">
+        <system-out>
+            <![CDATA[Given kullanici amazon anasayfasinda........................................passed
+Then kullanici Nutella icin arama yapar.....................................passed
+And sonuclarin Nutella icerdigini test eder.................................passed
+And sayfayi kapatir.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1001 Kullanici Amazon Sayfasinda Arama Yapar" name="TC02 kullanici amazonda Java aratir" time="18.717">
+        <system-out>
+            <![CDATA[Given kullanici amazon anasayfasinda........................................passed
+Then kullanici Java icin arama yapar........................................passed
+And sonuclarin Java icerdigini test eder....................................passed
+And sayfayi kapatir.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1001 Kullanici Amazon Sayfasinda Arama Yapar" name="TC03 kullanici iphone aratir" time="12.029">
+        <system-out>
+            <![CDATA[When kullanici amazon anasayfasinda.........................................passed
+And kullanici iphone icin arama yapar.......................................passed
+Then sonuclarin iphone icerdigini test eder.................................passed
+And sayfayi kapatir.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1002 Kullanici ortak adimlari Background ile calisilir" name="TC04 amazon nutella arama" time="12.82">
+        <system-out>
+            <![CDATA[Given kullanici amazon anasayfasinda........................................passed
+And kullanici Nutella icin arama yapar......................................passed
+Then sonuclarin Nutella icerdigini test eder................................passed
+And sayfayi kapatir.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1002 Kullanici ortak adimlari Background ile calisilir" name="TC05 amazon java arama" time="12.677">
+        <system-out>
+            <![CDATA[Given kullanici amazon anasayfasinda........................................passed
+Then kullanici Java icin arama yapar........................................passed
+And sonuclarin Java icerdigini test eder....................................passed
+And sayfayi kapatir.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1003 kullanici parametre kullanarak arama yapabilmeli" name="TC06 kullanici parametre ile amazonda arama yapabilmeli" time="15.424">
+        <system-out>
+            <![CDATA[Given kullanici amazon anasayfasinda........................................passed
+And kullanici "Nutella" icin arama yapar....................................passed
+And sonuclarin "Nutella" icrdigini test eder................................passed
+Then sayfayi kapatir........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1004 kullanıcı parametre ile configuration file'i kullanabilmeli" name="TC07 configuration properties dosyasindan parametre kullanabilmeli" time="16.749">
+        <system-out>
+            <![CDATA[Given kullanici "amazonUrl" anasayfasindan..................................passed
+Then kullanici 5 sn bekler..................................................passed
+And url'in "amazon" icerdigini test eder....................................passed
+Then sayfayi kapatir........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1005 Dogru kullanici adi  ve sifre ile giris yapabilmeli" name="TC08 positive login test" time="52.663">
+        <system-out>
+            <![CDATA[Given kullanici "HMCUrl" anasayfasindan.....................................passed
+Then Log in yazisina tiklar.................................................passed
+And gecerli username girer..................................................passed
+And gecerli password girer..................................................passed
+And Login butonuna basar....................................................passed
+Then sayfaya giris yaptigini kontrol eder...................................passed
+And sayfayi kapatir.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1006 Yanlis bilgilerle siteye giris yapilamaz" name="TC09 yanlıs password ile giris yapilamaz" time="21.147">
+        <system-out>
+            <![CDATA[Given kullanici "HMCUrl" anasayfasindan.....................................passed
+Then Log in yazisina tiklar.................................................passed
+And gecerli username girer..................................................passed
+And gecersiz password girer.................................................passed
+And Login butonuna basar....................................................passed
+Then sayfaya giris yapılamadigini test eder.................................passed
+And sayfayi kapatir.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1006 Yanlis bilgilerle siteye giris yapilamaz" name="TC10  yanlis kullanici adı ile giris yapilamaz" time="25.132">
+        <system-out>
+            <![CDATA[Given kullanici "HMCUrl" anasayfasindan.....................................passed
+Then Log in yazisina tiklar.................................................passed
+And gecersiz username girer.................................................passed
+And gecerli password girer..................................................passed
+And Login butonuna basar....................................................passed
+Then sayfaya giris yapılamadigini test eder.................................passed
+And sayfayi kapatir.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1006 Yanlis bilgilerle siteye giris yapilamaz" name="TC11 yanlıs kullanıcı adı ve yanlıs sifre  ile giris yapilamaz" time="27.026">
+        <system-out>
+            <![CDATA[Given kullanici "HMCUrl" anasayfasindan.....................................passed
+Then Log in yazisina tiklar.................................................passed
+And gecersiz username girer.................................................passed
+And gecersiz password girer.................................................passed
+And Login butonuna basar....................................................passed
+Then sayfaya giris yapılamadigini test eder.................................passed
+And sayfayi kapatir.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1007 kullanici amazonda istedigi kelimeleri aratir" name="TC12 amazonda listedeki elementleri aratma" time="12.824">
+        <system-out>
+            <![CDATA[Given kullanici "amazonUrl" anasayfasindan..................................passed
+Then kullanici "nutella" icin arama yapar...................................passed
+And sonuclarin "nutella" icrdigini test eder................................passed
+And sayfayi kapatir.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1007 kullanici amazonda istedigi kelimeleri aratir" name="TC12 amazonda listedeki elementleri aratma 2" time="11.456">
+        <system-out>
+            <![CDATA[Given kullanici "amazonUrl" anasayfasindan..................................passed
+Then kullanici "Java" icin arama yapar......................................passed
+And sonuclarin "Java" icrdigini test eder...................................passed
+And sayfayi kapatir.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1007 kullanici amazonda istedigi kelimeleri aratir" name="TC12 amazonda listedeki elementleri aratma 3" time="11.632">
+        <system-out>
+            <![CDATA[Given kullanici "amazonUrl" anasayfasindan..................................passed
+Then kullanici "elma" icin arama yapar......................................passed
+And sonuclarin "elma" icrdigini test eder...................................passed
+And sayfayi kapatir.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1007 kullanici amazonda istedigi kelimeleri aratir" name="TC12 amazonda listedeki elementleri aratma 4" time="11.123">
+        <system-out>
+            <![CDATA[Given kullanici "amazonUrl" anasayfasindan..................................passed
+Then kullanici "armut" icin arama yapar.....................................passed
+And sonuclarin "armut" icrdigini test eder..................................passed
+And sayfayi kapatir.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1008 kullanici farkli yanlis sifre ve kullanici adı ile giris yapamaz" name="TC13 yanlis kullanici adı ve sifrelerle giris yapilamaz" time="26.226">
+        <system-out>
+            <![CDATA[Given kullanici "HMCUrl" anasayfasindan.....................................passed
+Then Log in yazisina tiklar.................................................passed
+And gecersiz username olarak "Manager5" girer...............................passed
+And gecersiz password olarak "Manager5!" girer..............................passed
+And Login butonuna basar....................................................passed
+Then sayfaya giris yapılamadigini test eder.................................passed
+And sayfayi kapatir.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1008 kullanici farkli yanlis sifre ve kullanici adı ile giris yapamaz" name="TC13 yanlis kullanici adı ve sifrelerle giris yapilamaz 2" time="30.541">
+        <system-out>
+            <![CDATA[Given kullanici "HMCUrl" anasayfasindan.....................................passed
+Then Log in yazisina tiklar.................................................passed
+And gecersiz username olarak "Manager6" girer...............................passed
+And gecersiz password olarak "Manager6!" girer..............................passed
+And Login butonuna basar....................................................passed
+Then sayfaya giris yapılamadigini test eder.................................passed
+And sayfayi kapatir.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1008 kullanici farkli yanlis sifre ve kullanici adı ile giris yapamaz" name="TC13 yanlis kullanici adı ve sifrelerle giris yapilamaz 3" time="25.084">
+        <system-out>
+            <![CDATA[Given kullanici "HMCUrl" anasayfasindan.....................................passed
+Then Log in yazisina tiklar.................................................passed
+And gecersiz username olarak "Manager7" girer...............................passed
+And gecersiz password olarak "Manager7!" girer..............................passed
+And Login butonuna basar....................................................passed
+Then sayfaya giris yapılamadigini test eder.................................passed
+And sayfayi kapatir.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1008 kullanici farkli yanlis sifre ve kullanici adı ile giris yapamaz" name="TC13 yanlis kullanici adı ve sifrelerle giris yapilamaz 4" time="20.668">
+        <system-out>
+            <![CDATA[Given kullanici "HMCUrl" anasayfasindan.....................................passed
+Then Log in yazisina tiklar.................................................passed
+And gecersiz username olarak "Manager8" girer...............................passed
+And gecersiz password olarak "Manager8!" girer..............................passed
+And Login butonuna basar....................................................passed
+Then sayfaya giris yapılamadigini test eder.................................passed
+And sayfayi kapatir.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1008 kullanici farkli yanlis sifre ve kullanici adı ile giris yapamaz" name="TC13 yanlis kullanici adı ve sifrelerle giris yapilamaz 5" time="21.858">
+        <system-out>
+            <![CDATA[Given kullanici "HMCUrl" anasayfasindan.....................................passed
+Then Log in yazisina tiklar.................................................passed
+And gecersiz username olarak "Manager9" girer...............................passed
+And gecersiz password olarak "Manager9!" girer..............................passed
+And Login butonuna basar....................................................passed
+Then sayfaya giris yapılamadigini test eder.................................passed
+And sayfayi kapatir.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1009 Datatables sitesine 5 farkli giris yapalim" name="TC14 kullanici 5 farkli kayit girisi yapabilmeli" time="18.948">
+        <system-out>
+            <![CDATA[When kullanici "dataTablesUrl" anasayfasindan...............................passed
+Then new butonuna basar.....................................................passed
+And isim bolumune "Alim" yazar..............................................passed
+And kullanici 1 sn bekler...................................................passed
+And soyisim bolumune "Alim" yazar...........................................passed
+And kullanici 1 sn bekler...................................................passed
+And position bolumune "QA" yazar............................................passed
+And kullanici 1 sn bekler...................................................passed
+And office bolumune "ankara" yazar..........................................passed
+And kullanici 1 sn bekler...................................................passed
+And extension bolumune "UI" yazar...........................................passed
+And kullanici 1 sn bekler...................................................passed
+And startDate bolumune "2021-10-11" yazar...................................passed
+And kullanici 1 sn bekler...................................................passed
+And salary bolumune "10000" salary..........................................passed
+And Create tusuna basar.....................................................passed
+When kullanici "Alim" arama yapar...........................................passed
+Then isim bolumunde "Alim" oldugunu test Eder...............................passed
+And sayfayi kapatir.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1009 Datatables sitesine 5 farkli giris yapalim" name="TC14 kullanici 5 farkli kayit girisi yapabilmeli 2" time="14.88">
+        <system-out>
+            <![CDATA[When kullanici "dataTablesUrl" anasayfasindan...............................passed
+Then new butonuna basar.....................................................passed
+And isim bolumune "Berk" yazar..............................................passed
+And kullanici 1 sn bekler...................................................passed
+And soyisim bolumune "Can" yazar............................................passed
+And kullanici 1 sn bekler...................................................passed
+And position bolumune "tester" yazar........................................passed
+And kullanici 1 sn bekler...................................................passed
+And office bolumune "ankara" yazar..........................................passed
+And kullanici 1 sn bekler...................................................passed
+And extension bolumune "api" yazar..........................................passed
+And kullanici 1 sn bekler...................................................passed
+And startDate bolumune "2022-05-05" yazar...................................passed
+And kullanici 1 sn bekler...................................................passed
+And salary bolumune "11000" salary..........................................passed
+And Create tusuna basar.....................................................passed
+When kullanici "Berk" arama yapar...........................................passed
+Then isim bolumunde "Berk" oldugunu test Eder...............................passed
+And sayfayi kapatir.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1009 Datatables sitesine 5 farkli giris yapalim" name="TC14 kullanici 5 farkli kayit girisi yapabilmeli 3" time="15.105">
+        <system-out>
+            <![CDATA[When kullanici "dataTablesUrl" anasayfasindan...............................passed
+Then new butonuna basar.....................................................passed
+And isim bolumune "Huseyin" yazar...........................................passed
+And kullanici 1 sn bekler...................................................passed
+And soyisim bolumune "Korkmaz" yazar........................................passed
+And kullanici 1 sn bekler...................................................passed
+And position bolumune "BA" yazar............................................passed
+And kullanici 1 sn bekler...................................................passed
+And office bolumune "berlin" yazar..........................................passed
+And kullanici 1 sn bekler...................................................passed
+And extension bolumune "-" yazar............................................passed
+And kullanici 1 sn bekler...................................................passed
+And startDate bolumune "2022-07-10" yazar...................................passed
+And kullanici 1 sn bekler...................................................passed
+And salary bolumune "40000" salary..........................................passed
+And Create tusuna basar.....................................................passed
+When kullanici "Huseyin" arama yapar........................................passed
+Then isim bolumunde "Huseyin" oldugunu test Eder............................passed
+And sayfayi kapatir.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1009 Datatables sitesine 5 farkli giris yapalim" name="TC14 kullanici 5 farkli kayit girisi yapabilmeli 4" time="14.2">
+        <system-out>
+            <![CDATA[When kullanici "dataTablesUrl" anasayfasindan...............................passed
+Then new butonuna basar.....................................................passed
+And isim bolumune "Fatih" yazar.............................................passed
+And kullanici 1 sn bekler...................................................passed
+And soyisim bolumune "Sahin" yazar..........................................passed
+And kullanici 1 sn bekler...................................................passed
+And position bolumune "PO" yazar............................................passed
+And kullanici 1 sn bekler...................................................passed
+And office bolumune "berlin" yazar..........................................passed
+And kullanici 1 sn bekler...................................................passed
+And extension bolumune "-" yazar............................................passed
+And kullanici 1 sn bekler...................................................passed
+And startDate bolumune "2022-03-12" yazar...................................passed
+And kullanici 1 sn bekler...................................................passed
+And salary bolumune "45000" salary..........................................passed
+And Create tusuna basar.....................................................passed
+When kullanici "Fatih" arama yapar..........................................passed
+Then isim bolumunde "Fatih" oldugunu test Eder..............................passed
+And sayfayi kapatir.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1009 Datatables sitesine 5 farkli giris yapalim" name="TC14 kullanici 5 farkli kayit girisi yapabilmeli 5" time="14.928">
+        <system-out>
+            <![CDATA[When kullanici "dataTablesUrl" anasayfasindan...............................passed
+Then new butonuna basar.....................................................passed
+And isim bolumune "Ahmet" yazar.............................................passed
+And kullanici 1 sn bekler...................................................passed
+And soyisim bolumune "Kaya" yazar...........................................passed
+And kullanici 1 sn bekler...................................................passed
+And position bolumune "Tester" yazar........................................passed
+And kullanici 1 sn bekler...................................................passed
+And office bolumune "ankara" yazar..........................................passed
+And kullanici 1 sn bekler...................................................passed
+And extension bolumune "database" yazar.....................................passed
+And kullanici 1 sn bekler...................................................passed
+And startDate bolumune "2022-06-03" yazar...................................passed
+And kullanici 1 sn bekler...................................................passed
+And salary bolumune "11000" salary..........................................passed
+And Create tusuna basar.....................................................passed
+When kullanici "Ahmet" arama yapar..........................................passed
+Then isim bolumunde "Ahmet" oldugunu test Eder..............................passed
+And sayfayi kapatir.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1010 herokuapp Delete test" name="TC15 herokuapp'dan delete butonu calismali" time="23.401">
+        <system-out>
+            <![CDATA[Given kullanici "herokuappUrl" anasayfasindan...............................passed
+And Add Element butonuna basar..............................................passed
+Then Delete butonu gorunur oluncaya kadar bekleyin..........................passed
+And Delete butonunun gorunur oldugunu test edin.............................passed
+Then Delete butonuna basarak butonu silin...................................passed
+And Delete butonunun gorunmedigini test edin................................passed
+And sayfayi kapatir.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1011 Web tablosundaki istenen sutunu yazdırma" name="TC16 kullanici sutun basligi ile liste alabilmeli" time="8.415">
+        <system-out>
+            <![CDATA[Given kullanici "guruUrl" anasayfasindan....................................passed
+And "Company"  sutunundaki tum degerleri yazdirir...........................passed
+Then sayfayi kapatir........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1012 kullanici register yapabilmeli" name="TC17 kullanici uygun datalarla register olabilmeli" time="12.683">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given kullanici "automationUrl" anasayfasindan..............................passed
 And user sign in linkine tiklar.............................................passed
-And user Create and account bölümüne email adresi girer.....................passed
-And Create an Account butonuna basar........................................passed
-And user kisisel bilgilerini ve iletisim bilgilerini girer..................passed
-And user Register butonuna basar............................................passed
-Then hesap olustugunu dogrulayin............................................failed
+And user Create and account bölümüne email adresi girer.....................undefined
+And Create an Account butonuna basar........................................skipped
+And user kisisel bilgilerini ve iletisim bilgilerini girer..................skipped
+And user Register butonuna basar............................................skipped
+Then hesap olustugunu dogrulayin............................................skipped
 And sayfayi kapatir.........................................................skipped
-
-StackTrace:
-org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //*[text()='Welcome to your account. Here you can manage all of your personal information and orders.']
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.1.3', revision: '7b1ebf28ef'
-System info: host: 'CILGINMIMAR', ip: '192.168.1.115', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15'
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy23.isDisplayed(Unknown Source)
-	at stepDefinitions.AutomationStepDefinitions.hesap_olustugunu_dogrulayin(AutomationStepDefinitions.java:86)
-	at ✽.hesap olustugunu dogrulayin(file:///E:/Yazılım%20projeleri/intelji%20IDE/projelerim/com.Cucumber.Selenium/src/test/resources/features/US1012_AutomationPractice.feature:11)
 ]]>
         </failure>
+    </testcase>
+    <testcase classname="US1013 kullanici excel biligilerine ulasir" name="TC18 kullanici excel bilgilerini kullanir" time="3.713">
+        <system-out>
+            <![CDATA[Given kullanici excel dosyasini kullanilabilir hale getirir.................passed
+Then 2.satirdaki 3.hucreyi yazdirir.........................................passed
+And baskenti Jakarta olan ulke ismini yazdirir..............................passed
+And Ulke sayisinin 190 oldugunu test eder...................................passed
+And Fiziki olarak kullanilan satir sayisinin 191 oldugunu test eder.........passed
+Then 3.satirdaki 2.hucreyi yazdirir.........................................passed
+]]>
+        </system-out>
     </testcase>
 </testsuite>
